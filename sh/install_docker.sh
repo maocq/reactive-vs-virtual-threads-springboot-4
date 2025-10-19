@@ -18,14 +18,13 @@ sudo apt-get update
 
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 
-sudo systemctl status docker
+#sudo systemctl status docker
 
 sudo systemctl start docker
-
 
 
 #
 
 sudo groupadd docker
-sudo usermod -aG docker $USER
-newgrp docker
+sudo usermod -aG docker ubuntu
+sudo newgrp docker
