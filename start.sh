@@ -3,7 +3,7 @@ set -e
 source ./sh/functions.sh
 
 case=$1
-#case="java-native-ms"
+#case="reactive"
 
 
 StackName=$(jq -r ".StackName" "config.json")-$case
@@ -16,7 +16,8 @@ User=$(jq -r ".User" "config.json")
 KeyName=$(jq -r ".KeyName" "config.json")
 Key=$(jq -r ".Key" "config.json")
 
-p_ip=$(dig @resolver4.opendns.com myip.opendns.com +short -4)
+#p_ip=$(dig @resolver4.opendns.com myip.opendns.com +short -4)
+p_ip=$(curl -s ifconfig.me)
 MyIp=$(echo "$p_ip/24")
 CidrSubnet=$(aws ec2 describe-subnets --subnet-ids $SubnetId | jq -r '.Subnets[].CidrBlock')
 

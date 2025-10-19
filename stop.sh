@@ -2,7 +2,7 @@
 set -e
 
 case=$1
-#case="java-native-ms"
+#case="reactive"
 
 StackName=$(jq -r ".StackName" "config.json")-$case
 
