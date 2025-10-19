@@ -23,8 +23,8 @@ public class RestConsumerConfig {
     private int timeout;
 
     @Bean
-    public WebClient getWebClient() {
-        return WebClient.builder()
+    public WebClient getWebClient(WebClient.Builder builder) {
+        return builder
                 .baseUrl(url)
                 .defaultHeader(HttpHeaders.CONTENT_TYPE, "application/json")
                 .clientConnector(getClientHttpConnector())

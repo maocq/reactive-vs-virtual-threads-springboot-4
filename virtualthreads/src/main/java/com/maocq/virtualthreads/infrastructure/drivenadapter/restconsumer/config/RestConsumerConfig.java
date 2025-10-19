@@ -13,8 +13,8 @@ public class RestConsumerConfig {
     private String url;
 
     @Bean
-    RestClient restClient() {
-        return RestClient.builder()
+    RestClient restClient(RestClient.Builder builder) {
+        return builder
                 .baseUrl(url)
                 .requestFactory(new JdkClientHttpRequestFactory())
                 .build();

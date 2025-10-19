@@ -1,0 +1,11 @@
+{
+    "StackName": "test-stack-mao",
+    "UrlReposity": "https://github.com/maocq/reactive-vs-virtual-threads-springboot-4",
+    "VpcId": "vpc-0f4999e5a0807d788",
+    "SubnetId": "subnet-001bc47273ea5c656",
+    "InstanceType": "t2.micro",
+    "ImageId": "ami-0c7217cdde317cfec",
+    "User": "ubuntu",
+    "KeyName": "maocq-poc",
+    "Key": "/Users/johncarm/mao/info/keys/maocq-poc.pem"
+}
