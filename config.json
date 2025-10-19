@@ -4,7 +4,7 @@
     "VpcId": "vpc-0f4999e5a0807d788",
     "SubnetId": "subnet-001bc47273ea5c656",
     "InstanceType": "t2.micro",
-    "ImageId": "ami-0c7217cdde317cfec",
+    "ImageId": "ami-0360c520857e3138f",
     "User": "ubuntu",
     "KeyName": "maocq-poc",
     "Key": "/Users/johncarm/mao/info/keys/maocq-poc.pem"
