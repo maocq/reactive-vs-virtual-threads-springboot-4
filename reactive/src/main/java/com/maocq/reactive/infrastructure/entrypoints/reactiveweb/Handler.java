@@ -1,5 +1,6 @@
 package com.maocq.reactive.infrastructure.entrypoints.reactiveweb;
 
+import com.maocq.reactive.domain.usecase.CasesUseCase;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.server.ServerRequest;
@@ -10,6 +11,8 @@ import reactor.core.publisher.Mono;
 @AllArgsConstructor
 public class Handler {
 
+    private final CasesUseCase useCases;
+
     public Mono<ServerResponse> hello(ServerRequest serverRequest) {
         return ServerResponse.ok().bodyValue("Hello world!");
     }
@@ -17,12 +20,14 @@ public class Handler {
     public Mono<ServerResponse> caseOne(ServerRequest serverRequest) {
         var latency = serverRequest.queryParam("latency").map(Integer::valueOf).orElse(0);
 
-        return ServerResponse.ok().bodyValue("Hello world!");
+        return useCases.caseOne(latency)
+                .flatMap(response -> ServerResponse.ok().bodyValue(response));
     }
 
     public Mono<ServerResponse> caseTwo(ServerRequest serverRequest) {
         var latency = serverRequest.queryParam("latency").map(Integer::valueOf).orElse(0);
 
-        return ServerResponse.ok().bodyValue("Hello world!");
+        return useCases.caseTwo(latency)
+                .flatMap(response -> ServerResponse.ok().bodyValue(response));
     }
 }
