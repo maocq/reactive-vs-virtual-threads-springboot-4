@@ -1,5 +1,6 @@
 package com.maocq.virtualthreads.infrastructure.entrypoint.apirest;
 
+import com.maocq.virtualthreads.domain.model.account.Account;
 import com.maocq.virtualthreads.domain.model.user.User;
 import com.maocq.virtualthreads.domain.usecase.CasesUseCase;
 import lombok.AllArgsConstructor;
@@ -30,5 +31,16 @@ public class ApiRest {
     User caseTwo(@RequestParam Optional<Integer> latency) {
         var latencyParam = latency.orElse(0);
         return useCases.caseTwo(latencyParam);
+    }
+
+    @GetMapping(path = "/api/case-three")
+    public Optional<Account> caseThree() {
+        return useCases.caseThree(4000);
+    }
+
+    @GetMapping(path = "/api/case-four")
+    public Account caseFour(@RequestParam Optional<Integer> latency) {
+        var latencyParam = latency.orElse(0);
+        return useCases.caseFour(4000, latencyParam);
     }
 }
