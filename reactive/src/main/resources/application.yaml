@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: "reactive"
+
+adapter:
+  restconsumer:
+    timeout: 5000
+    url: "http://${LATENCY_IP:localhost}:3000"
+
+database:
+  database: "postgres"
+  schema: "public"
+  username: "postgres"
+  password: "pass"
+  host: "${DB_IP:localhost}"
+  port: 5432

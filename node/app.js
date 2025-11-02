@@ -1,9 +1,9 @@
 const express = require('express')
 const app = express()
-const port = 8080
+const port = 3000
 
 app.get('/:latency?', (req, res) => {
-  setTimeout(() => res.send('Hello!'), req.params.latency || 0);
+  setTimeout(() => res.json({id: "CC12345" + Math.floor(Math.random() * 9999), name: "Foo"}), req.params.latency || 0);
 })
 
 app.listen(port, () => {

@@ -1,6 +1,7 @@
 package com.maocq.reactive.domain.model.primes;
 
 public class Primes {
+
     public static String primes (int N) {
         boolean[] isPrime = new boolean[N + 1];
         for (int i = 2; i <= N; i++)
