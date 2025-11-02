@@ -14,3 +14,7 @@ database:
   password: "pass"
   host: "${DB_IP:localhost}"
   port: 5432
+
+#logging:
+#  level:
+#    io.r2dbc.postgresql.QUERY: DEBUG

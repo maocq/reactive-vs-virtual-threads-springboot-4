@@ -14,6 +14,7 @@ import java.util.Properties;
 
 @Configuration
 public class JpaConfig {
+    public static final int MAX_SIZE = 20;
 
     @Bean
     public DataSource datasource(PostgresqlConnectionProperties properties,
@@ -23,6 +24,7 @@ public class JpaConfig {
         config.setUsername(properties.username());
         config.setPassword(properties.password());
         config.setDriverClassName(driverClass);
+        config.setMaximumPoolSize(MAX_SIZE);
         return new HikariDataSource(config);
     }
 
