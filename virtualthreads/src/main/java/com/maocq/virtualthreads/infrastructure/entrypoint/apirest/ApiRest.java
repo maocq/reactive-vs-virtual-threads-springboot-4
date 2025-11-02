@@ -1,5 +1,6 @@
 package com.maocq.virtualthreads.infrastructure.entrypoint.apirest;
 
+import com.maocq.virtualthreads.domain.model.user.User;
 import com.maocq.virtualthreads.domain.usecase.CasesUseCase;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,7 +27,7 @@ public class ApiRest {
     }
 
     @GetMapping("/api/case-two")
-    String caseTwo(@RequestParam Optional<Integer> latency) {
+    User caseTwo(@RequestParam Optional<Integer> latency) {
         var latencyParam = latency.orElse(0);
         return useCases.caseTwo(latencyParam);
     }
