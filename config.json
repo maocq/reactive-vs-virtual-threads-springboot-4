@@ -1,5 +1,5 @@
 {
-    "StackName": "test-3-stack-mao",
+    "StackName": "test-stack-mao",
     "UrlReposity": "https://github.com/maocq/reactive-vs-virtual-threads-springboot-4",
     "VpcId": "vpc-0f4999e5a0807d788",
     "SubnetId": "subnet-001bc47273ea5c656",

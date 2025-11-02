@@ -5,7 +5,7 @@ spring:
 adapter:
   restconsumer:
     timeout: 5000
-    url: "http://${LATENCY_IP:localhost}:3000"
+    url: "http://${LATENCY_IP:localhost}:8080"
 
 database:
   database: "postgres"
