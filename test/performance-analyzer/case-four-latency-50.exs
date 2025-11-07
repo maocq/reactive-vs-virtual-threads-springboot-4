@@ -1,7 +1,7 @@
 import Config
 
 config :distributed_performance_analyzer,
-  url: "http://_IP_:8080/api/hello",
+  url: "http://_IP_:8080/api/case-four?latency=50",
   request: %{
     method: "GET",
     headers: [],

@@ -14,7 +14,7 @@ import java.util.Properties;
 
 @Configuration
 public class JpaConfig {
-    public static final int MAX_SIZE = 20;
+    public static final int MAX_SIZE = 50;
 
     @Bean
     public DataSource datasource(PostgresqlConnectionProperties properties,

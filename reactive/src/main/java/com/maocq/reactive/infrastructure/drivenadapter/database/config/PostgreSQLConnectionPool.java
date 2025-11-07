@@ -11,8 +11,8 @@ import java.time.Duration;
 
 @Configuration
 public class PostgreSQLConnectionPool {
-    public static final int INITIAL_SIZE = 20;
-    public static final int MAX_SIZE = 20;
+    public static final int INITIAL_SIZE = 50;
+    public static final int MAX_SIZE = 50;
     public static final int MAX_IDLE_TIME = 30;
 
     @Bean
