@@ -56,7 +56,7 @@ echo "\n\n Latency Ip"
 echo "http://$latency_ip:8080"
 
 echo "\n\n Db Ip"
-echo "http://$db_ip:8080"
+echo "$db_ip"
 
 echo "\n\n App"
 echo "ssh -o \"StrictHostKeyChecking no\" -i "$Key" $User@$app_ip" > /dev/tty
