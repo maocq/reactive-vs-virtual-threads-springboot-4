@@ -37,7 +37,7 @@ sequenceDiagram
     actor Client
     Client->>Application: 
     Application->>ExternalService: Request
-    ExternalService->>ExternalService: Simulate latency (100 ms)
+    ExternalService->>ExternalService: Simulate latency
     ExternalService->>Application: Response
     Application->>Client: Response
 ```
@@ -52,7 +52,7 @@ sequenceDiagram
     actor Client
     Client->>Application: 
     Application->>ExternalService: Request
-    ExternalService->>ExternalService: Simulate latency (100 ms)
+    ExternalService->>ExternalService: Simulate latency
     ExternalService->>Application: Response
     Application->>Application: Cpu bound task
     Application->>Client: Response
